@@ -8,5 +8,6 @@ namespace Dominio.Interfaces;
 
 public interface IUserRepository : IGenericRepository<User>
 {
-
+    Task<User> GetByRefreshTokenAsync(string refreshToken);
+    Task<User> GetByUsernameAsync(string username);
 }
